@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    padding-top: 50px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 300px; /*fixed*/
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #444;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /*padding tidak melebar*/
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px; /* jarak tombol*/
+}
+
+.buttons button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #777;
+}
+
+.buttons .operator {
+    background-color: #f39c12;
+}
+
+.buttons .clear {
+    background-color: #e74c3c;
+}
+
+.buttons .clear:hover {
+    background-color: #c0392b;
+}
+
+#plusButton {
+    grid-column: 4;
+    grid-row: 2 / span 2;
+    background-color: #f39c12;
+    height: auto;
+}
+
+#equalsButton {
+    grid-column: 4;
+    grid-row: 4 / span 2;
+    background-color: #27ae60;
+    height: auto;
+}
+
+.marquee-container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 10px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.marquee-text {
+    font-family: 'Press Start 2p', cursive;
+    color: #fff;
+    font-size: 1.2em;
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee-animation 15s linear infinite;
+}
